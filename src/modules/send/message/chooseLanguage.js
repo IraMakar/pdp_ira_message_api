@@ -7,28 +7,33 @@ const chooseLanguage = async (params) => {
       `https://api.telegram.org/bot${process.env.token}/sendMessage`,
       {
         chat_id,
-        text: "Вибери мову!",
+        text: "Вибери, будь ласка, мову, щоб піти далі і продовжити своє пребування тут!",
+        parse_mode: "Markdown",
         reply_markup: {
+          remove_keyboard: true,
           inline_keyboard: [
             [
               {
-                text: "Укр",
-                callback_data: "ua",
+                text: "Українська",
+                callback_data: "uk",
               },
             ],
             [
               {
-                text: "Рус",
+                text: "Русский",
                 callback_data: "ru",
               },
             ],
             [
               {
-                text: "Анг",
+                text: "English",
                 callback_data: "en",
               },
             ],
           ],
+          //one_time_keyboard: false,
+          //resize_keyboard: true
+          remove_keyboard: true
         },
       }
     )

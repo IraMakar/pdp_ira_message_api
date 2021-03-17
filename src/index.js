@@ -11,8 +11,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.post("/sendMessage", async (req, res) => {
-  const { templateName, chat_id } = req.body;
-  const sendResult = await modules[templateName]({ chat_id });
+  const { templateName, chat_id, lang, templateVars} = req.body;
+  const sendResult = await modules[templateName]({ chat_id, lang, templateVars });
   res.send(`${JSON.stringify(sendResult, null, 2)}`);
 });
 
