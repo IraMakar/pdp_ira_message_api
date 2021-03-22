@@ -11,9 +11,14 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.post("/sendMessage", async (req, res) => {
-  const { templateName, chat_id, lang, templateVars} = req.body;
-  const sendResult = await modules[templateName]({ chat_id, lang, templateVars });
+  try {
+  const { templateName, chat_id, lang, message_id, templateVars} = req.body;
+  const sendResult = await modules[templateName]({ chat_id, lang, message_id, templateVars });
   res.send(`${JSON.stringify(sendResult, null, 2)}`);
+      
+} catch (error) {
+    console.log(error);
+}
 });
 
 app.listen(process.env.PORT, () => {

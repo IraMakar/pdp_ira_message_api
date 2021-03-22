@@ -3,18 +3,18 @@ const axios = require("axios");
 const texts = {
   uk: {
     text1: "Хочете поміняти своє Я ?",
-    button_1: "так, хочу стати шукачем картин",
-    button_2: "назад",
+    button_1: "Так, хочу стати шукачем картин",
+    button_2: "Ні, не хочу",
   },
   ru: {
-    text1: "Хочете поміняти своє Я ?",
-    button_1: "Я - шукач картин",
+    text1: "Хотите поменять свое Я ?",
+    button_1: "Да, хочу стать искателем картин",
     button_2: "Я - художник",
   },
   en: {
-    text1: "Хочете поміняти своє Я ?",
-    button_1: "Я - шукач картин",
-    button_2: "Я - художник",
+    text1: "Do you want to change your self ?",
+    button_1: "Yes, I want to become a seeker of paintings",
+    button_2: "No I don`t want",
   },
 };
 
@@ -38,7 +38,7 @@ const changeWhoAreYou = async (params) => {
             [
               {
                 text: texts[lang].button_2,
-                callback_data: "back",
+                callback_data: "backToArtistMenu",
               },
             ],
             

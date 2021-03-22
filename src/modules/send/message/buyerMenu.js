@@ -2,22 +2,28 @@ const axios = require("axios");
 
 const texts = {
   uk: {
-    text1: "Тобі відкриваються нові можливості, тому оприділяйся 👇",
-    button_1: "Дії з картинами",
-    button_2: "Реклама",
-    button_3: "Перегляд статистики",
-    button_4: "Перегляд заявок",
-    button_5: "Зв'язок з адміном",
-    button_6: "Налаштування",
+    text1: "Вибирай що саме тебе цікавить👇",
+    button_1: "Пошук картин",
+    button_2: "Перегляд історії переглядів",
+    button_3: "Перегляд вподобаних картин",
+    button_4: "Зв'язок з адміном",
+    button_5: "Налаштування",
   },
   ru: {
-    text1: "Тебе открываются новые возможности, поэтому определяйся 👇",
-    button_1: "Я - шукач картин",
-    button_2: "Я - художник",
-    button_3: "Я - шукач картин",
-    button_4: "Я - художник",
-    button_5: "Я - шукач картин",
-    button_6: "Я - художник",
+    text1: "Выбирай что именно тебя интересует 👇",
+    button_1: "Поиск картин",
+    button_2: "Просмотр истории просмотров",
+    button_3: "Просмотр понравившихся картин",
+    button_4: "Связь с админом",
+    button_5: "Настройки",
+  },
+  en: {
+    text1: "Choose what exactly interests you 👇",
+    button_1: "Search for paintings",
+    button_2: "View browsing history",
+    button_3: "View your favorite pictures",
+    button_4: "Contact with administrator",
+    button_5: "Setting",
   },
 };
 
@@ -31,38 +37,37 @@ const buyerMenu = async (params) => {
         chat_id,
         text: texts[lang].text1,
         reply_markup: {
+          parse_mode: "Markdown",
           inline_keyboard: [
             [
               {
                 text: texts[lang].button_1,
-                callback_data: "1",
+                callback_data: "searchPictures",
               },
               {
                 text: texts[lang].button_2,
-                callback_data: "2",
+                callback_data: "viewHistory",
               },
             ],
             [
               {
                 text: texts[lang].button_3,
-                callback_data: "3",
+                callback_data: "viewLiked",
               },
               {
                 text: texts[lang].button_4,
-                callback_data: "4",
+                callback_data: "contactWithAdministrator",
               },
             ],
             [
               {
                 text: texts[lang].button_5,
-                callback_data: "buyer",
-              },
-              {
-                text: texts[lang].button_6,
-                callback_data: "setting",
+                callback_data: "buyerSettings",
               },
             ],
           ],
+          one_time_keyboard: true,
+          resize_keyboard: true,
         },
       }
     )
@@ -70,5 +75,5 @@ const buyerMenu = async (params) => {
 };
 
 module.exports = {
-    buyerMenu,
+  buyerMenu,
 };

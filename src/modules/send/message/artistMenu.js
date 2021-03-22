@@ -56,10 +56,6 @@ const artistMenu = async (params) => {
                 text: texts[lang].button_3,
                 callback_data: "viewStatistics",
               },
-              {
-                text: texts[lang].button_4,
-                callback_data: "viewApplications",
-              },
             ],
             [
               {
@@ -68,7 +64,7 @@ const artistMenu = async (params) => {
               },
               {
                 text: texts[lang].button_6,
-                callback_data: "setting",
+                callback_data: "artistSettings",
               },
             ],
           ],

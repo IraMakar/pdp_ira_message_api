@@ -32,13 +32,13 @@ const artAdvertisingMore = async (params) => {
             [
               {
                 text: texts[lang].button_1,
-                callback_data: "toAdvertisingPicture",
+                callback_data: "advertisingPicture",
               },
             ],
             [
               {
                 text: texts[lang].button_2,
-                callback_data: "backToArtistMenu",
+                callback_data: "advertising",
               },
             ],
           ],

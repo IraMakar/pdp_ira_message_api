@@ -3,7 +3,7 @@ const axios = require("axios");
 const texts = {
   uk: {
     text1:
-      "Вибери відповідну категорію до якої бажаєш додати картину. \n\nЯкщо немає відповідної категорії - звернись до адміністратора і він з радістю її додасть.",
+      "Вибери відповідну категорію, картини якої бажаєш переглянути:",
     button_1: "Живопис",
     button_2: "Графіка",
     button_3: "Модерн",
@@ -27,7 +27,7 @@ const texts = {
   },
 };
 
-const artActionsPostPicture = async (params) => {
+const bayerSearchCategoryId = async (params) => {
   const { chat_id, lang, templateVars } = params;
   console.log(lang);
   return (
@@ -41,13 +41,13 @@ const artActionsPostPicture = async (params) => {
             ...templateVars.categories.map((category) => [
               {
                 text: category.settings[lang],
-                callback_data: `categId_${category.id}`,
+                callback_data: `categIdSPic_${category.id}`,
               },
             ]),
             [
               {
                 text: texts[lang].button_4,
-                callback_data: "actionsWithPictures",
+                callback_data: "searchPictures",
               },
             ],
           ],
@@ -58,5 +58,5 @@ const artActionsPostPicture = async (params) => {
 };
 
 module.exports = {
-  artActionsPostPicture,
+  bayerSearchCategoryId,
 };

@@ -3,7 +3,7 @@ const axios = require("axios");
 const texts = {
   uk: {
     text1:
-      "Вибери відповідну категорію до якої бажаєш додати картину. \n\nЯкщо немає відповідної категорії - звернись до адміністратора і він з радістю її додасть.",
+      "Вибери нову відповідну категорію до якої бажаєш віднести свою картину. \n\nЯкщо немає відповідної категорії - звернись до адміністратора і він з радістю її додасть.",
     button_1: "Живопис",
     button_2: "Графіка",
     button_3: "Модерн",
@@ -11,7 +11,7 @@ const texts = {
   },
   ru: {
     text1:
-      "Выбери соответствующую категорию к которой желаешь добавить картину. \n\nЕсли нет соответствующей категории - обратись к администратору и он с радостью ее добавит.",
+      "Выбери новую соответствующую категорию к которой желаешь отнести свою картину. \n\nЕсли нет соответствующей категории - обратись к администратору и он с радостью ее добавит.",
     button_1: "Живопись",
     button_2: "Графика",
     button_3: "Модерн",
@@ -19,7 +19,7 @@ const texts = {
   },
   en: {
     text1:
-      "Select the appropriate category to which you want to add the picture. \n\nIf there is no corresponding category - contact the administrator and he will be happy to add it.",
+      "Select a new appropriate category to which you want to include your picture. \n\nIf there is no corresponding category - contact the administrator and he will be happy to add it.",
     button_1: "Painting",
     button_2: "Graphics",
     button_3: "Modern",
@@ -27,7 +27,7 @@ const texts = {
   },
 };
 
-const artActionsPostPicture = async (params) => {
+const artEditPictureCategory = async (params) => {
   const { chat_id, lang, templateVars } = params;
   console.log(lang);
   return (
@@ -41,13 +41,13 @@ const artActionsPostPicture = async (params) => {
             ...templateVars.categories.map((category) => [
               {
                 text: category.settings[lang],
-                callback_data: `categId_${category.id}`,
+                callback_data: `newCategId_${category.id}_${templateVars.picture_id}`,
               },
             ]),
             [
               {
                 text: texts[lang].button_4,
-                callback_data: "actionsWithPictures",
+                callback_data: "backToEditPost",
               },
             ],
           ],
@@ -58,5 +58,5 @@ const artActionsPostPicture = async (params) => {
 };
 
 module.exports = {
-  artActionsPostPicture,
+    artEditPictureCategory,
 };
