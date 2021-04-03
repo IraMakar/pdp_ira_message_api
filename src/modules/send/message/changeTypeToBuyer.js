@@ -11,6 +11,11 @@ const texts = {
     button_1: "Да, хочу стать искателем картин",
     button_2: "Нет, хочу остаться художником",
   },
+  en: {
+    text1: "Does the artist want to change his self and become a seeker of paintings? 😱",
+    button_1: "Yes, I want to become a seeker of paintings",
+    button_2: "No, I want to remain an artist",
+  },
 };
 
 const changeTypeToBuyer = async (params) => {

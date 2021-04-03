@@ -62,7 +62,7 @@ const buyerSerchPictures = async (params) => {
             [
               {
                 text: texts[lang].button_5,
-                callback_data: "buyer",
+                callback_data: "backToBuyerMenu",
               },
             ],
           ],

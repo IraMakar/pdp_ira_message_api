@@ -7,11 +7,11 @@ const texts = {
   },
   ru: {
     text1:
-      "Ми відправили художнику повідомлення, що вас зацікавила ця картина!",
+      "Мы отправили художнику сообщение, что вас заинтересовала эта картина!",
   },
   en: {
     text1:
-      "Ми відправили художнику повідомлення, що вас зацікавила ця картина!",
+      "We sent a message to the artist that you are interested in this painting!",
   },
 };
 
@@ -25,10 +25,10 @@ const notificationToAstistAboutApplying = async (params) => {
         chat_id,
         text:
           lang == "uk"
-            ? `Заявка:\nКористувач: @${templateVars.user_login}\nІм'я картини: ${templateVars.picture_name}`
+            ? `Заявка:\nКористувач: ${templateVars.user_login?`@${templateVars.user_login}`:`${templateVars.phone}`}\nІм'я картини: ${templateVars.picture_name}`
             : lang == "ru"
-            ? `dfg:\dfg: @${templateVars.user_login}\dfg'я dfg: ${templateVars.picture_name}`
-            : `Заявка:\nКористувач: @${templateVars.user_login}\nІм'я картини: ${templateVars.picture_name}`,
+            ? `Заявка:\nПользователь: ${templateVars.user_login?`@${templateVars.user_login}`:`${templateVars.phone}`}\nИмя картины: ${templateVars.picture_name}`
+            : `Application:\nUser: ${templateVars.user_login?`@${templateVars.user_login}`:`${templateVars.phone}`}\nName of Picture: ${templateVars.picture_name}`,
       }
     )
   ).data;

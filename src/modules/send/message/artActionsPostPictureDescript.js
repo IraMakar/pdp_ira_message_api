@@ -32,7 +32,7 @@ const artActionsPostPictureDescript = async (params) => {
             [
               {
                 text: texts[lang].button_1,
-                callback_data: "artActionsPostPictureImage",
+                callback_data: "exhibitPicture",
               },
             ],
           ],

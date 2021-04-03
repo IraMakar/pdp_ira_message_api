@@ -9,12 +9,12 @@ const texts = {
   },
   ru: {
     text1: "Хочешь прорекламировать свой шедевр?",
-    button_1: "Так хочу",
+    button_1: "Да, хочу",
     button_2: "Нет, хочу вернуться обратно",
     button_3: "Хочу узнать больше об этом",
   },
   en: {
-    text1: "Want to promote your masterpiece?",
+    text1: "Do you want to promote your masterpiece?",
     button_1: "Yes, I want",
     button_2: "No, I want to go back",
     button_3: "I want to know more about it",

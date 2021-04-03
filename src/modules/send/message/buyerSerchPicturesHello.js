@@ -18,7 +18,7 @@ const texts = {
     button_5: "Назад",
   },
   en: {
-    text1: "Picture Finder - You're on the right track to find pictures!\n\nSearch paintings by: 👇",
+    text1: "Picture Finder - you're on the right track to find pictures!\n\nSearch paintings by: 👇",
     button_1: "An artist",
     button_2: "Category",
     button_3: "The size",

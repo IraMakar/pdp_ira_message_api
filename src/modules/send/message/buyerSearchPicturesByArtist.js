@@ -11,7 +11,7 @@ const texts = {
   },
   ru: {
     text1:
-      "Выбери соответствующую категорию к которой желаешь добавить картину. \n\nЕсли нет соответствующей категории - обратись к администратору и он с радостью ее добавит.",
+      "Выбери соответствующего художника чьи картины ты хочешь посмотреть👇",
     button_1: "Живопись",
     button_2: "Графика",
     button_3: "Модерн",
@@ -19,7 +19,7 @@ const texts = {
   },
   en: {
     text1:
-      "Select the appropriate category to which you want to add the picture. \n\nIf there is no corresponding category - contact the administrator and he will be happy to add it.",
+      "Choose the appropriate artist whose paintings you want to view👇",
     button_1: "Painting",
     button_2: "Graphics",
     button_3: "Modern",

@@ -5,26 +5,40 @@ const texts = {
     text1: "Гортай і переглядай картини👆",
     button_1: "<-",
     button_2: "->",
-    button_3: "Вподобати",
-    button_6: "Вподобано❤️",
+    button_3: "🤍",
+    button_6: "❤️",
     button_4: "Повернутись назад",
     button_5: "Зацікавила",
+    picture: "Картина: ",
+    descript: "Опис: ",
+    size: "Розмір: ",
+    painter: "Художник: "
   },
   ru: {
-    text1: "Листай и выбирай картину👆",
+    text1: "Листай и пересматривай картины👆",
     button_1: "<-",
     button_2: "->",
-    button_3: "Эта",
-    button_4: "Bернуться обратно",
-    button_5: "Зацікавила",
+    button_3: "🤍",
+    button_6: "❤️",
+    button_4: "Вернуться назад",
+    button_5: "Заинтересовала",
+    picture: "Картина: ",
+    descript: "Описание: ",
+    size: "Размер: ",
+    painter: "Художник: "
   },
   en: {
-    text1: "Flip and choose a picture👆",
+    text1: "Flip and view pictures👆",
     button_1: "<-",
     button_2: "->",
-    button_3: "This",
+    button_3: "🤍",
+    button_6: "❤️",
     button_4: "Go back",
-    button_5: "Зацікавила",
+    button_5: "Interested",
+    picture: "Picture: ",
+    descript: "Description: ",
+    size: "Size: ",
+    painter: "Painter: "
   },
 };
 
@@ -40,7 +54,7 @@ const buyerEditViewPicture = async (params) => {
         media: {
           type: 'photo',
           media: templateVars.photoUrl,
-          caption: `Картина\n${templateVars.name}\nОпис: ${templateVars.description}\nРозмір ${templateVars.height}х${templateVars.width}\nХудожник:${templateVars.nickname}\nHashtags: ${templateVars.hashtags}`,
+          caption: `${texts[lang].picture}${templateVars.name}\n${texts[lang].descript}${templateVars.description}\n${texts[lang].size}${templateVars.height}х${templateVars.width}\n${texts[lang].painter}${templateVars.nickname}\nHashtags: ${templateVars.hashtags}`,
         },
         reply_markup: {
           inline_keyboard: [

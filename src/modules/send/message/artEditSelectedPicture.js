@@ -1,16 +1,28 @@
 const axios = require("axios");
 
-// const texts = {
-//     uk: {
-//         text1: "Твій вибір для видалення: 👇",
-//     },
-//     ru: {
-//         text1: "Твой выбор для удаления: 👇",
-//     },
-//     en: {
-//         text1: "Your choice to remove: 👇",
-//     }
-// };
+const texts = {
+  uk: {
+    picture: "Картина: ",
+    descript: "Опис: ",
+    size: "Розмір: ",
+    painter: "Художник: ",
+    chooseText: "Твій вибір для РЕДАГУВАННЯ: 👆"
+  },
+  ru: {
+    picture: "Картина: ",
+    descript: "Описание: ",
+    size: "Размер: ",
+    painter: "Художник: ",
+    chooseText: "Твой выбор для РЕДАКТИРОВАНИЯ: 👆"
+  },
+  en: {
+    picture: "Picture: ",
+    descript: "Description: ",
+    size: "Size: ",
+    painter: "Painter: ",
+    chooseText: "Your choice for EDITING: 👆"
+  },
+};
 
 const artEditSelectedPicture = async (params) => {
   const { chat_id, templateVars, lang } = params;
@@ -21,7 +33,7 @@ const artEditSelectedPicture = async (params) => {
         chat_id,
         photo: templateVars.photoUrl,
         //photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Photoshop-screenshot.JPG/1200px-Photoshop-screenshot.JPG",
-        caption: `Картина\n${templateVars.name}\nОпис: ${templateVars.description}\nРозмір ${templateVars.height}х${templateVars.width}\nХудожник:${templateVars.nickname}\nHashtags: ${templateVars.hashtags}\n\nТвій вибір для РЕДАГУВАННЯ: 👆`,
+        caption: `${texts[lang].picture}${templateVars.name}\n${texts[lang].descript}${templateVars.description}\n${texts[lang].size}${templateVars.height}х${templateVars.width}\n${texts[lang].painter}${templateVars.nickname}\nHashtags: ${templateVars.hashtags}\n\n${texts[lang].chooseText}`,
         //caption: "Картина\n${templateVars.name}\nОпис:",
       }
     )

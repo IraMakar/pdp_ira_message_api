@@ -4,21 +4,24 @@ const texts = {
   uk: {
     text1: "Цей функціонал платний",
     text2: "Бажаєш скористатися?",
+    text3: "Статистика художника",
     button_1: "Оплатити",
     button_2: "По хештегах",
     button_3: "Хочу вернутись назад",
   },
   ru: {
-    text1: "Цей функціонал платний",
-    text2: "Бажаєш скористатися?",
-    button_1: "Оплатити",
+    text1: "Этот функционал платный",
+    text2: "Хочешь воспользоваться?",
+    text3: "Статистика художника",
+    button_1: "Оплатить",
     button_2: "За хэштегом",
     button_3: "Хочу вернуться назад",
   },
   en: {
-    text1: "Цей функціонал платний",
-    text2: "Бажаєш скористатися?",
-    button_1: "Оплатити",
+    text1: "This functionality is paid",
+    text2: "Do you want to use?",
+    text3: "Artist statistics",
+    button_1: "Pay",
     button_2: "By hashtags",
     button_3: "I want to go back",
   },
@@ -31,7 +34,7 @@ const artViewStatistics = async (params) => {
     await axios.post(
       `https://api.telegram.org/bot${process.env.token}/sendInvoice`,
       {
-        chat_id: 467013671,
+        chat_id: chat_id,
         title: texts[lang].text1,
         description: texts[lang].text2,
         payload: `statisic_${chat_id}`,
@@ -40,7 +43,7 @@ const artViewStatistics = async (params) => {
         currency: "UAH",
         prices: [
           {
-            label: "Статистика художника",
+            label: texts[lang].text3,
             amount: 100,
           },
         ],

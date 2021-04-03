@@ -12,7 +12,7 @@ const texts = {
     button_2: "Вернуться в главное меню",
   },    
   en: {
-    text1: "Picture hashtags changed successfully! \n\nWant to look at the end result?",
+    text1: "Picture hashtags changed successfully! \n\nDo you want to look at the end result?",
     button_1: "View post",
     button_2: "Return to the main menu",
   },

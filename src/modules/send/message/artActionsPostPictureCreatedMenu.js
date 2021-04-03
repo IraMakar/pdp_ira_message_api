@@ -7,12 +7,12 @@ const texts = {
     button_2: "Повернутись до головного меню",
   },
   ru: {
-    text1: "Как тебе? Понравилось? \n\nХочешь выставить еще одну картину?",
+    text1: "Как тебе? Понравилось? \nХочешь выставить еще одну картину?",
     button_1: "Выставить еще одну картину",
     button_2: "Вернуться в главное меню",
   },
   en: {
-    text1: "Want to look at the end result?",
+    text1: "What do you think? Did you like it? \nDo you want to put up another picture?",
     button_1: "Exhibit another painting",
     button_2: "Return to the main menu",
   },

@@ -1,5 +1,6 @@
 module.exports = {
     ...require('./startNumberMessage'),
+    ...require('./startNOTNumberMessage'),
     ...require('./succesRegistration'),
     ...require('./succesRegistrationStiker'),
     ...require('./chooseLanguage'),
@@ -23,6 +24,12 @@ module.exports = {
     ...require('./artActionsPostPictureCreated'),
     ...require('./artActionsPostPictureCreatedMenu'),
     ...require('./artActionsWithoutPicture'),
+    ...require('./artActionsNOTPictureSend'),
+    ...require('./artActionsNOTSizeSend'),
+    ...require('./artActionsNOTDescriotionSend'),
+    
+    
+
     
     ...require('./artAdvertising'),
     ...require('./artAdvertisingMore'),
@@ -93,10 +100,17 @@ module.exports = {
     ...require('./buyerSearchBySizeSetMax'),
 
     ...require('./buyerSearchByHashtag'),
+    ...require('./buyerNOTSearchByHashtag'),
+    
 
     ...require('./applicationWasSent'),
     ...require('./notificationToAstistAboutApplying'),
 
     ...require('./advertisingPictureMessage'),
     ...require('./showStatisticByArtist'),
+    ...require('./errorNumber'),
+    ...require('./errorText'),
+    ...require('./errorTextStiker'),
+    ...require('./artistSettings'),
+    
 };

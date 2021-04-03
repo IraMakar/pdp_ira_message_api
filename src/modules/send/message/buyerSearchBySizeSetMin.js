@@ -3,17 +3,17 @@ const axios = require("axios");
 const texts = {
   uk: {
     text1:
-      "Вкажи мінімальний розмір картини, яку шукаєш, отак (00-00)!",
+      "Вкажи мінімальний розмір картини, яку шукаєш (00-00)",
       button_1: "Повернутись назад", 
   },
   ru: {
     text1:
-      "Шаг 2 успешно пройден тоже! \n\nНа данном этапе шаг 3 из 5 - укажи размер своей картины (00-00)!",
+      "Укажи минимальный размер картины, которую ищешь (00-00)",
       button_1: "Вернуться обратно", 
   },
   en: {
     text1:
-      "Step 2 passed successfully too! \n\nAt this stage, the step 3 of 5 - specify the size of your picture (00-00)!",
+      "Specify the minimum size of the picture you are looking for (00-00)",
       button_1: "Go back", 
   },
 };

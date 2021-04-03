@@ -3,22 +3,22 @@ const axios = require("axios");
 const texts = {
   uk: {
     text1:
-      "Вкажи хештег за яким ти бажаєш переглянути картини",
+      "Напиши будь ласка розмір у відповідному форматі вказуючи розмір у сантиметрах (00-00)",
       button_1: "Повернутись назад", 
   },
   ru: {
     text1:
-      "Укажи хэштег по которому ты хочешь посмотреть картины",
+      "Напиши пожалуйста размер в соответствующем формате указывая размер в сантиметрах (00-00)",
       button_1: "Вернуться обратно", 
   },
   en: {
     text1:
-      "Specify the hashtag by which you want to view the pictures",
+      "Please write the size in the appropriate format indicating the size in centimeters (00-00)",
       button_1: "Go back", 
   },
 };
 
-const buyerSearchByHashtag = async (params) => {
+const artActionsNOTSizeSend = async (params) => {
   const { chat_id, lang } = params;
   return (
     await axios.post(
@@ -32,7 +32,7 @@ const buyerSearchByHashtag = async (params) => {
             [
               {
                 text: texts[lang].button_1,
-                callback_data: "searchPictures",
+                callback_data: "artActionsPostPictureDescript",
               },
             ],
           ],
@@ -43,5 +43,5 @@ const buyerSearchByHashtag = async (params) => {
 };
 
 module.exports = {
-    buyerSearchByHashtag,
+    artActionsNOTSizeSend,
 };

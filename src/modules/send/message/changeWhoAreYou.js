@@ -9,7 +9,7 @@ const texts = {
   ru: {
     text1: "Хотите поменять свое Я ?",
     button_1: "Да, хочу стать искателем картин",
-    button_2: "Я - художник",
+    button_2: "Нет, не хочу",
   },
   en: {
     text1: "Do you want to change your self ?",
