@@ -18,6 +18,7 @@ app.post("/sendMessage", async (req, res) => {
       
 } catch (error) {
     console.log(error);
+    res.send(`${JSON.stringify(error, null, 2)}`);
 }
 });
 

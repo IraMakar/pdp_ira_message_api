@@ -77,6 +77,9 @@ module.exports = {
     ...require('./artAdvertisingAllPictures'), 
     ...require('./artEditAdvertisingAllPictures'), 
 
+    ...require('./artAdvertiseWithoutPicture'), 
+    
+
     ...require('./contactWithAdministratorStiker'), 
     ...require('./contactWithAdministrator'), 
 
@@ -91,16 +94,25 @@ module.exports = {
     
     
     ...require('./buyerSearchPicturesByArtist'),
+    ...require('./buyerNOTSearchByArtist'),
 
     ...require('./buyerViewPicture'),
     ...require('./buyerEditViewPicture'),
     ...require('./bayerSearchCategoryId'),
+    ...require('./buyerNOTSearchByCategory'),
+    
 
     ...require('./buyerSearchBySizeSetMin'),
     ...require('./buyerSearchBySizeSetMax'),
+    ...require('./buyerNOTSearchBySize'),
+    
+    ...require('./buyerNOTFavouritePicture'),
+    ...require('./buyerNOTViewedPicture'),
+    
 
     ...require('./buyerSearchByHashtag'),
     ...require('./buyerNOTSearchByHashtag'),
+
     
 
     ...require('./applicationWasSent'),
